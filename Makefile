@@ -1,6 +1,4 @@
-.PHONY: all plan apply destroy
-
-all: help
+.PHONY: 
 
 help: 
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
@@ -8,15 +6,20 @@ help:
 install:
 	python3 -m venv venv
 	source venv/bin/activate
-	python3 -m pip install -r requirements.txt
+	python -m pip install -r requirements.txt
 	npm install -g widdershins.
 
-test: check-var-env
+generate-md-specs:
+	python app/generate_specs.py
+	widdershins specs/openapi.json -o specs/openapi.md
+
+test: 
 	pytest
 
-build:
+docker-build:
 	docker build -t sample_app .
 
-run:
-	docker run -p 80:80 sample_app
+docker-run:
+	docker run -dp 80:80 sample_app
+	open http://localhost:80/docs
 
