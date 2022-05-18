@@ -4,17 +4,17 @@
 
 ### Dev environment
 
-1 - `make install`
-2 - `uvicorn app.main:app --reload`
+- `make install`
+- `uvicorn app.main:app --reload`
 
 ### Docker
 
- 1 - `make docker-build `
- 2 - `make docker-run`
+ - `make docker-build `
+ - `make docker-run`
  
- ### Tests 
+### Tests 
  
- 1 - `make test`
+- `make test`
 
 ## Generate OpenAPI Specs
 
@@ -23,17 +23,17 @@
 The specs are generated based of the source code and updated dynamically.
 
 Run the app 
-1 - `make docker-run` 
-2 - open http://localhost:80/docs in your browser
+- `make docker-run` 
+- open http://localhost:80/docs in your browser
 
 ### Generate Markdown version using widdershins
 
-1 - `python app/generate_specs.py`
-2 - `widdershins specs/openapi.json -o specs/openapi.md`
+- `python app/generate_specs.py`
+- `widdershins specs/openapi.json -o specs/openapi.md`
 
 OR 
 
-1 - `make generate-md-specs`
+- `make generate-md-specs`
 
 
 
