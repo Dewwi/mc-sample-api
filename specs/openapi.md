@@ -1,5 +1,5 @@
 ---
-title: Custom title v2.5.0
+title: API Specs v3.0.0
 language_tabs:
   - shell: Shell
   - http: HTTP
@@ -19,13 +19,11 @@ headingLevel: 2
 
 <!-- Generator: Widdershins v4.0.1 -->
 
-<h1 id="custom-title">Custom title v2.5.0</h1>
+<h1 id="api-specs">API Specs v3.0.0</h1>
 
 > Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
 
-This is a very custom OpenAPI schema
-
-<h1 id="custom-title-default">Default</h1>
+<h1 id="api-specs-default">Default</h1>
 
 ## get_health_healthz_get
 
@@ -365,9 +363,9 @@ null
 This operation does not require authentication
 </aside>
 
-## update_account_accounts__account_id__put
+## insert_or_replace_account_accounts__account_id__put
 
-<a id="opIdupdate_account_accounts__account_id__put"></a>
+<a id="opIdinsert_or_replace_account_accounts__account_id__put"></a>
 
 > Code samples
 
@@ -520,7 +518,7 @@ func main() {
 
 `PUT /accounts/{account_id}`
 
-*Update Account*
+*Insert Or Replace Account*
 
 > Body parameter
 
@@ -533,7 +531,7 @@ func main() {
 }
 ```
 
-<h3 id="update_account_accounts__account_id__put-parameters">Parameters</h3>
+<h3 id="insert_or_replace_account_accounts__account_id__put-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -548,14 +546,14 @@ func main() {
 null
 ```
 
-<h3 id="update_account_accounts__account_id__put-responses">Responses</h3>
+<h3 id="insert_or_replace_account_accounts__account_id__put-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful Response|Inline|
 |422|[Unprocessable Entity](https://tools.ietf.org/html/rfc2518#section-10.3)|Validation Error|[HTTPValidationError](#schemahttpvalidationerror)|
 
-<h3 id="update_account_accounts__account_id__put-responseschema">Response Schema</h3>
+<h3 id="insert_or_replace_account_accounts__account_id__put-responseschema">Response Schema</h3>
 
 <aside class="success">
 This operation does not require authentication
